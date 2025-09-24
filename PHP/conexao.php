@@ -1,8 +1,7 @@
 <?php
-
 $host = 'localhost';
 $usuario = 'root';
-$senha = 'livialopes';
+$senha = '';            // <-- senha vazia
 $database = 'porta_entrada';
 
 $conexao = new mysqli($host, $usuario, $senha, $database);

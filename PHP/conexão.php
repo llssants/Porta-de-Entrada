@@ -2,12 +2,12 @@
 
 $host = 'localhost';
 $usuario = 'root';
-$senha = '';
+$senha = 'portadeentrada';
 $database = 'porta_entrada';
 
-$conexão = new mysqli($host, $usuario, $senha, $database);
+$conexao = new mysqli($host, $usuario, $senha, $database);
 
-if ($conexão->connect_error) {
+if ($conexao->connect_error) {
     die("Falha na conexão: " . $conexão->connect_error);
 }
 ?>
