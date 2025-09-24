@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'conexao.php'; // conexao mysqli
+require_once 'conexão.php'; // conexão mysqli
 
 // Mensagem de erro ou sucesso
 $msg = "";
@@ -14,7 +14,7 @@ if (isset($_POST['cadastrar'])) {
     $turma = $_POST['turma'];
 
     // Verificar se o email já existe
-    $check = $conexao->prepare("SELECT id_usuario FROM usuarios WHERE email=?");
+    $check = $conexão->prepare("SELECT id_usuario FROM usuarios WHERE email=?");
     $check->bind_param("s", $email);
     $check->execute();
     $result = $check->get_result();
@@ -22,7 +22,7 @@ if (isset($_POST['cadastrar'])) {
     if ($result->num_rows > 0) {
         $msg = "Email já cadastrado!";
     } else {
-        $stmt = $conexao->prepare("INSERT INTO usuarios (nome, email, senha, perfil, turma) VALUES (?, ?, ?, ?, ?)");
+        $stmt = $conexão->prepare("INSERT INTO usuarios (nome, email, senha, perfil, turma) VALUES (?, ?, ?, ?, ?)");
         $stmt->bind_param("sssss", $nome, $email, $senha, $perfil, $turma);
         
         if ($stmt->execute()) {
@@ -38,7 +38,7 @@ if (isset($_POST['login'])) {
     $email = $_POST['email_login'];
     $senha = $_POST['senha_login'];
 
-    $stmt = $conexao->prepare("SELECT * FROM usuarios WHERE email=?");
+    $stmt = $conexão->prepare("SELECT * FROM usuarios WHERE email=?");
     $stmt->bind_param("s", $email);
     $stmt->execute();
     $result = $stmt->get_result();
