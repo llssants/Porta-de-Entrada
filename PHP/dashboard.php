@@ -1,7 +1,8 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['usuario']) || !isset($_SESSION['perfil'])) {
+// Se não estiver logado, redireciona
+if (!isset($_SESSION['usuario'])) {
     header("Location: index.php");
     exit;
 }
@@ -10,8 +11,12 @@ $nome = $_SESSION['usuario'];
 $perfil = $_SESSION['perfil'];
 
 // Sistema de pontos
-if (!isset($_SESSION['pontos'])) $_SESSION['pontos'] = 0;
-if (!isset($_SESSION['ultimo_estudo'])) $_SESSION['ultimo_estudo'] = "";
+if (!isset($_SESSION['pontos'])) {
+    $_SESSION['pontos'] = 0;
+}
+if (!isset($_SESSION['ultimo_estudo'])) {
+    $_SESSION['ultimo_estudo'] = "";
+}
 
 if (isset($_POST['estudar'])) {
     $hoje = date("Y-m-d");
@@ -23,17 +28,7 @@ if (isset($_POST['estudar'])) {
         $msg = "⚠️ Você já marcou estudo hoje! Volte amanhã 😉";
     }
 }
-
-if ($perfil === 'professor') {
-    $linkPerfil = 'perfil_professor.php';
-} elseif ($perfil === 'coordenador') {
-    $linkPerfil = 'perfil_coordenador.php';
-} else {
-    $linkPerfil = 'perfil_aluno.php'; // padrão para aluno
-}
-
 ?>
-
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -50,7 +45,7 @@ if ($perfil === 'professor') {
             <a href="../HTML/metodos.html">Métodos de Estudo</a>
             <a href="#">Universidades</a>
             <a href="#">Estudos</a>
-            <a href="<?php echo $linkPerfil; ?>" class="btn">Perfil</a>
+            <a href="../HTML/perfil.html">Perfil</a>
             <a href="logout.php">Sair</a>
         </nav>
     </header>

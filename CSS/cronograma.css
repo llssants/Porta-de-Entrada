@@ -3,42 +3,95 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    color: #850e0e;
 }
 
 body {
-    background: linear-gradient(135deg, #ee2d2d, #d63636, #ce2121ef);
-    background-size: 400% 400%;
+    background-image: url('../IMG/imgfundo3.jfif');
+    /* Substitua pelo caminho da sua imagem */
+    /* background-size: cover; */
+    /* Ajusta a imagem para cobrir a tela */
+    /* background-repeat: no-repeat; */
+    /* Impede que a imagem se repita */
+    /* background-attachment: fixed; */
     animation: bgAnim 10s ease infinite;
-    color: #ffffff;
-    min-height: 100vh;
+    color: #ff1c1c;
+    
     display: flex;
+    
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 10vh;
 }
 
-@keyframes bgAnim {
+/* 
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #940000;
+    color: white;
+    padding-bottom:  20px;
+    width: 220vh;
+}
 
-    0%,
-    100% {
-        background-position: 0% 50%;
-    }
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin-top:30px ;
+}
 
-    50% {
-        background-position: 100% 50%;
-    }
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+.logo p {
+    margin-top: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+
+.logar {
+    width: 40%;
+    height: auto;
+    color: #f2f2f2;
+
+}
+
+.menu-icon {
+    display: none;
+} */
+
+h2 {
+    font: 2em sans-serif;
+    margin: 1vh;
 }
 
 h1 {
     font-size: 2.2rem;
-   padding: ;
-    color: #ffffff;
-    text-shadow: 0 0 10px #400e08;
+    color: #ff1c1c;
+    text-shadow: 0 0 10px #a38f8f;
 }
 
 /* Formulário */
 form {
-    background: #b80606ce;
+    background: #ffffff;
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 0 20px #b6210777;
@@ -52,8 +105,10 @@ form {
 /* Disciplinas organizadas em 3 linhas */
 #disciplinas {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* até 5 colunas */
-    gap: 20px; /* espaçamento entre os itens */
+    grid-template-columns: repeat(5, 1fr);
+    /* até 5 colunas */
+    gap: 20px;
+    /* espaçamento entre os itens */
     margin-top: 15px;
 }
 
@@ -68,7 +123,6 @@ form {
 }
 
 
-
 label {
     font-weight: 500;
     margin-bottom: 5px;
@@ -79,8 +133,8 @@ input[type="number"] {
     padding: 10px;
     border-radius: 8px;
     border: none;
-    background: #a72020;
-    color: #ffffff;
+    background: #ffffff;
+    color: #ff1c1c;
     outline: none;
     transition: 0.3s;
 }
@@ -89,7 +143,7 @@ select:hover,
 input:hover,
 select:focus,
 input:focus {
-    background: #7a0d0d;
+    background: #ffffff;
     /* vermelho mais intenso */
     box-shadow: 0 0 8px #ff4d4d;
     /* brilho vermelho */
@@ -103,14 +157,14 @@ input:focus {
     gap: 15px;
 }
 
-.mandar{
+.mandar {
     width: 50vh;
     align-self: center;
 }
 
 /* Botão */
 button {
-    background: linear-gradient(90deg, #b60903, #ff0000);
+    background: linear-gradient(90deg, #fffafa, #b34e4e);
     padding: 12px 20px;
     font-size: 1rem;
     border: none;
@@ -118,7 +172,7 @@ button {
     cursor: pointer;
     transition: 0.3s;
     box-shadow: 0 0 15px #b62107aa;
-    color: #fff;
+    color: #ff1c1c;
 }
 
 button:hover {
@@ -129,17 +183,16 @@ button:hover {
 
 /* Resultado */
 .resultado {
-    margin-top: 30px;
-    background: #630606;
-    padding: 20px;
+    align-self: center;
+    background: #ffffff;
     border-radius: 15px;
     box-shadow: 0 0 20px #ff4d4d55;
     width: 100%;
-    max-width: 700px;
+    padding: 1vh;
 }
 
 .resultado h2 {
-    color: #ffffff;
+    color: #be2626;
     margin-bottom: 15px;
 }
 
@@ -149,6 +202,47 @@ button:hover {
     flex-direction: column;
     gap: 8px;
 }
+
+
+.containeres {
+    align-self: center;
+
+}
+
+
+/* some como se fosse fumaça */
+.fadeOutSmoke {
+    animation: fadeOutSmoke 0.6s forwards;
+}
+
+@keyframes fadeOutSmoke {
+    to {
+        opacity: 0;
+        filter: blur(15px);
+        transform: scale(1.1);
+    }
+}
+
+/* aparece suavemente como se viesse da fumaça */
+.fadeInSmoke {
+    animation: fadeInSmoke 0.6s forwards;
+}
+
+@keyframes fadeInSmoke {
+    from {
+        opacity: 0;
+        filter: blur(15px);
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        filter: blur(0);
+        transform: scale(1);
+    }
+}
+
+
 
 /* Ações extras */
 .acoes {

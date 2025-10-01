@@ -47,7 +47,7 @@ if (isset($_POST['login'])) {
     if ($user && password_verify($senha, $user['senha'])) {
         $_SESSION['usuario'] = $user['nome'];
         $_SESSION['perfil'] = $user['perfil'];
-        header("Location: dashboard.php");
+        header("Location: entrada.php");
         exit;
     } else {
         $msg = "Email ou senha incorretos!";
@@ -222,7 +222,7 @@ if (isset($_POST['login'])) {
   <div class="right-panel">
     <!-- Login Form -->
  <form id="loginForm" method="POST" action="login.php">
-  <input type="hidden" name="login" value="1"> 
+  <input type="hidden" name="login" value="1"> <!-- 🔴 ESSENCIAL -->
   
   <h2>Entrar</h2>
   <input type="email" name="email_login" placeholder="Email" required>
@@ -234,7 +234,7 @@ if (isset($_POST['login'])) {
 
     <!-- Cadastro Form -->
    <form id="signupForm" style="display: none;" method="POST" action="login.php">
-  <input type="hidden" name="cadastrar" value="1"> 
+  <input type="hidden" name="cadastrar" value="1"> <!-- 🔴 ESSENCIAL -->
 
   <h2>Cadastrar</h2>
   <input type="text" name="nome" placeholder="Nome completo" required>
@@ -250,32 +250,30 @@ if (isset($_POST['login'])) {
 
   <select name="turma" required>
     <option value="" disabled selected>Selecione a turma</option>
-    <option value="Info A">Docente</option>
     <option value="Info A">Info A</option>
     <option value="Info B">Info B</option>
     <option value="Info C">Info C</option>
-    <option value="Info D">Info D</option>
-    <option value="Info E">Info E</option>
-    <option value="Info F">Info F</option>
-    <option value="Info G">Info G</option>
-    <option value="Info H">Info H</option>
-    <option value="Info I">Info I</option>
-    <option value="Agro A">Agro A</option>
-    <option value="Agro B">Agro B</option>
-    <option value="Agro C">Agro C</option>
-    <option value="Agro D">Agro D</option>
-    <option value="Agro E">Agro E</option>
-    <option value="Agro F">Agro F</option>
-    <option value="Agro G">Agro G</option>
-    <option value="Agro H">Agro H</option>
-    <option value="Agro I">Agro I</option>
-    <option value="Agro J">Agro J</option>
-    <option value="Agro k">Agro K</option>
-    <option value="Agro L">Agro L</option>
-    <option value="Alim A">Alim A</option>
-    <option value="Alim B">Alim B</option>
-    <option value="Alim C">Alim C</option>
-
+        <option value="Info D">Info D</option>
+        <option value="Info E">Info E</option>
+        <option value="Info F">Info F</option>
+        <option value="Info G">Info G</option>
+        <option value="Info H">Info H</option>
+        <option value="Info I">Info I</option>
+        <option value="Agro A">Agro A</option>
+        <option value="Agro B">Agro B</option>
+        <option value="Agro C">Agro C</option>
+        <option value="Agro D">Agro D</option>
+        <option value="Agro E">Agro E</option>
+        <option value="Agro F">Agro F</option>
+        <option value="Agro G">Agro G</option>
+        <option value="Agro H">Agro H</option>
+        <option value="Agro I">Agro I</option>
+        <option value="Agro J">Agro J</option>
+        <option value="Agro k">Agro K</option>
+        <option value="Agro L">Agro L</option>
+        <option value="Alim A">Alim A</option>
+        <option value="Alim B">Alim B</option>
+        <option value="Alim C">Alim C</option>
       </select>
 
       <button type="submit" class="submit-btn">Cadastrar</button>
