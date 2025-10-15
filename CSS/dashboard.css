@@ -1,63 +1,72 @@
-  body {
-            margin: 0;
-            font-family: "Segoe UI", sans-serif;
-            background: #f9f9f9;
-            color: #333;
-        }
-        header {
-            background: #d32f2f; /* vermelho */
-            color: #fff;
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        header h2 {
-            margin: 0;
-        }
-        nav a {
-            margin: 0 12px;
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        .container {
-            max-width: 900px;
-            margin: 30px auto;
-            background: #fff;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-        }
-        .pontos {
-            background: #ffebee; /* fundo rosado */
-            padding: 15px;
-            border-radius: 8px;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .pontos h3 {
-            margin: 5px 0;
-            color: #b71c1c;
-        }
-        .btn {
-            background: #d32f2f;
-            color: white;
-            padding: 10px 18px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 15px;
-        }
-        .btn:hover {
-            background: #b71c1c;
-        }
-        .msg {
-            text-align: center;
-            margin: 15px 0;
-            font-weight: bold;
-            color: #d32f2f;
-        }
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif; /* Usando a mesma fonte do projeto principal */
+    background: #f0f2f5; /* Fundo neutro e moderno */
+    color: #333;
+}
+header {
+    background: #940000; /* Vermelho principal do projeto */
+    color: #fff;
+    padding: 15px 40px; /* Aumentado o padding para melhor espaçamento */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adicionado sombra para profundidade */
+}
+header h2 {
+    margin: 0;
+    font-size: 1.8em; /* Ajustado o tamanho do título */
+}
+nav a {
+    margin: 0 15px; /* Ajustado o espaçamento entre os links */
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500; /* Texto do menu um pouco mais encorpado */
+    transition: color 0.3s ease; /* Transição suave para hover */
+}
+nav a:hover {
+    color: #ffcccc; /* Vermelho mais claro no hover */
+}
+.container {
+    max-width: 900px;
+    margin: 40px auto; /* Aumentado o espaçamento */
+    background: #fff;
+    padding: 30px; /* Aumentado o padding */
+    border-radius: 10px; /* Bordas mais arredondadas */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
+}
+.pontos {
+    background: #ffe5e5; /* Fundo rosado mais suave */
+    padding: 20px; /* Aumentado o padding */
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 25px; /* Aumentado o espaçamento */
+}
+.pontos h3 {
+    margin: 5px 0;
+    color: #940000; /* Vermelho principal */
+    font-size: 1.5em; /* Ajustado o tamanho do título */
+}
+.btn {
+    background: #940000; /* Vermelho principal */
+    color: white;
+    padding: 12px 20px; /* Aumentado o padding */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em; /* Ajustado o tamanho da fonte */
+    font-weight: 500;
+    transition: background-color 0.3s ease; /* Transição suave */
+}
+.btn:hover {
+    background: #7a0000; /* Vermelho mais escuro no hover */
+}
+.msg {
+    text-align: center;
+    margin: 20px 0; /* Aumentado o espaçamento */
+    font-weight: bold;
+    color: #940000; /* Vermelho principal */
+    font-size: 1.1em;
+}
+
